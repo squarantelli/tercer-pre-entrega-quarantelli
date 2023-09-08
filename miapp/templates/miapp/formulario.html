@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario de inserción de datos</h1>
+    <form method="post" action="{% url 'datos' %}">
+        {% csrf_token %}
+        
+        <!-- Campo de formulario para la clase Pais -->
+        <label for="id_pais_de_origen">País de origen:</label>
+        <input type="text" name="pais_de_origen" id="id_pais_de_origen">
+
+        <!-- Campo de formulario para la clase Cliente -->
+        <label for="id_nombre">Nombre:</label>
+        <input type="text" name="nombre" id="id_nombre">
+
+        <label for="id_apellido">Apellido:</label>
+        <input type="text" name="apellido" id="id_apellido">
+
+        <!-- Campo de formulario para la clase dni -->
+        <label for="id_dni">DNI:</label>
+        <input type="text" name="dni" id="id_dni">
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
